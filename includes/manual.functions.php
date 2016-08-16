@@ -735,7 +735,7 @@ class manual extends template {
 		}
 		// Now prepare the link
 		if ($url_display_type == "Name") {
-	 		$cate_name = urlencode($this->get_category_name_from_id($category_id));
+	 		$cate_name = $this->get_category_name_from_id($category_id));
 			if (empty($category_id)) {
 				$cate_name = "Home";
 			}
@@ -743,7 +743,7 @@ class manual extends template {
 				// $link = URL . "/page/" . $cate_name . "/";
 				$link = URL . "/" . $this->urlencodeclean($cate_name) . "/";
 			} else {
-				$article_name = urlencode($article_name);
+				//$article_name = urlencode($article_name);
 				// $link = URL . "/page/" . $cate_name . "/" . urlencode($article_name);
 				$link = URL . "/" . $this->urlencodeclean($cate_name) . "/" . $this->urlencodeclean($article_name);
 			}
